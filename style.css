@@ -7,6 +7,10 @@ body{
 a{
     color:black;
     text-decoration:none;
+    text-align:center;
+}
+ul.nav.nav-pills{
+    padding-left:44.265px;
 }
 div #table{
     background-color:peachpuff;
