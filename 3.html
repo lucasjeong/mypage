@@ -1,8 +1,5 @@
 <!doctype html>
 <html>
-    <style>
-        
-    </style>
     <head>
         <script
         src="http://code.jquery.com/jquery-3.5.1.js"
@@ -39,9 +36,29 @@
             <h2>
                 Contact
             </h2>
-            <p>
-                <br><a href="mailto:lucasjeong99@naver.com">Email : lucasjeong99@naver.com</a>
-            </p>
+            <p><br></p>
+            <script>
+                var password = "password123";
+                const inputpassword = prompt("password?");
+                if (inputpassword === password){
+                    document.write("<p><br><a href='mailto:lucasjeong99@naver.com'>Email : lucasjeong99@naver.com</a>");
+                } else {
+                    alert("Try Again");
+                    location.reload();
+                }
+            </script>
+            <input id="night_day" type="button" value="night" onclick="
+                var target = document.getElementById('article');
+                if(this.value === 'night'){
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'red';
+                    this.value = 'day';
+                } else {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    this.value = 'night';
+                }
+            ">
         </div>
     </div>
     </body>

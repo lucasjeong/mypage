@@ -53,6 +53,18 @@
                 <img src="https://websites.sportstg.com/pics/00/36/07/36/36073627_1_S.jpg" width=20 height=20>
                 &nbsp&nbsp2020&nbsp Genius Sports 데이터 리뷰어
             </p>
+            <input id="night_day" type="button" value="night" onclick="
+                var target = document.getElementById('article');
+                if(this.value === 'night'){
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'red';
+                    this.value = 'day';
+                } else {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    this.value = 'night';
+                }
+            ">
         </div>
     </div>
     </body>
