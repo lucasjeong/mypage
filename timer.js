@@ -4,11 +4,7 @@ const rbtn = document.querySelector('#resett');
 let timeInput = 0;
 
 let timerFunction = function(){
-    let min = document.querySelector('#m_timer').value;
-    let sec = document.querySelector('#s_timer').value;
-    timeInput = 60*Number(min) + Number(sec);
-
-    timeInput = timeInput--;
+    timeInput = timeInput - 1;
 
     let min2 = Math.floor(timeInput/60);
     let sec2 = timeInput%60;
@@ -23,6 +19,13 @@ let timerFunction = function(){
 
 let b;
 sbtn.onclick = function(){
+    let min = document.querySelector('#m_timer').value;
+    let sec = document.querySelector('#s_timer').value;
+    timeInput = 60*Number(min) + Number(sec);
+
+    document.querySelector('#m_timer').value='';
+    document.querySelector('#s_timer').value='';
+
     let currState = document.querySelector('#startt').textContent;
     if(currState === 'start'){
         document.querySelector('#startt').textContent = 'stop';
@@ -31,15 +34,13 @@ sbtn.onclick = function(){
         document.querySelector('#startt').textContent = 'start';
         clearInterval(b);
     }
-    if(timeInput = 0){
+    if(timeInput < 0){
         clearInterval(b);
-        document.querySelector('#w_timer h1').textContent="ALERT";
     }
 }
 
 rbtn.onclick = function(){
-    min = 0;
-    sec = 0;
+    timeInput= 0;
     let timeshow = document.querySelector('#w_timer h1');
     timeshow.textContent = '00:00';
 }
