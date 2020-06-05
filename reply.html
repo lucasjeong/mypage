@@ -12,7 +12,7 @@
         <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <title>
-            Yongjun Jeong - Contact
+            Yongjun Jeong - About
         </title>
         <meta charset="utf=-8">
         <link rel="stylesheet" href="style.css">
@@ -28,10 +28,10 @@
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="1.html">About</a></li>
                 <li role="presentation"><a href="2.html">Profile</a></li>
-                <li role="presentation" class="active"><a href="3.html">Contact</a></li>
+                <li role="presentation"><a href="3.html">Contact</a></li>
                 <li role="presentation"><a href="4.html">Timeline</a></li>
                 <li role="presentation"><a href="5.html">Timer</a></li>
-                <li role="presentation"><a href="reply.html">Reply</a></li>
+                <li role="presentation" class="active"><a href="reply.html">Reply</a></li>
             </ul>
             <div class="weather">
             </div>
@@ -39,19 +39,31 @@
         </div>
         <div id="article">
             <h2>
-                Contact
+                Reply
             </h2>
-            <p></p>
-            <script>
-                var password = "password123";
-                const inputpassword = prompt("password?");
-                if (inputpassword === password){
-                    document.write("<p><br><a href='mailto:lucasjeong99@naver.com'>Email : lucasjeong99@naver.com</a><br><br>");
-                } else {
-                    alert("Try Again");
-                    location.reload();
-                }
-            </script>
+            <p>
+                <br>
+                <div id="disqus_thread"></div>
+                <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://yongjun.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>         
+            </p>
+            <br>
             <input id="night_day" type="button" value="night" onclick="
                 var target = document.getElementById('article');
                 if(this.value === 'night'){
@@ -68,5 +80,3 @@
     </div>
     </body>
 </html>
-
-

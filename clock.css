@@ -17,7 +17,7 @@ body{
 #w_stopwatch, #w_clock{
     display:none;
 }
-input[type=text]{
+input[type=number]{
     width:50px;
 }
 h1{
